@@ -1,6 +1,11 @@
-import { firaCode } from "@/lib/fonts";
+import AppMainSender from "@/components/app-main-sender/app-main-sender";
+import AppMain from "@/components/app-main/app-main";
 import { ReactElement } from "react";
 
 export default function Home(): ReactElement {
-  return <h1 className={`font-mono ${firaCode.variable} text-5xl`}>Hello World</h1>;
+  return (
+    <AppMain>
+      <AppMainSender />
+    </AppMain>
+  );
 }
