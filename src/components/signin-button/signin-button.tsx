@@ -35,7 +35,7 @@ export default function SignInButton(): ReactElement {
           data-use_fedcm_for_prompt="true"
         ></div>
       </div>
-      <div className="g_id_signin" data-shape="pill" data-theme="outline" data-size="large"></div>
+      <div className="g_id_signin" data-shape="pill" data-theme="outline" data-size="large" data-width={180}></div>
     </div>
   );
 }
