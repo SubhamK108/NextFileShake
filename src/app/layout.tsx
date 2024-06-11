@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "../../public/fontawesome/css/fontawesome.min.css";
+import "../../public/fontawesome/css/brands.min.css";
+import "../../public/fontawesome/css/solid.min.css";
 import Script from "next/script";
 
 export const viewport: Viewport = {
