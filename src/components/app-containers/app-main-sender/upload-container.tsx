@@ -1,3 +1,5 @@
+"use client";
+
 import { AppState } from "@/services/app-state";
 import { Dispatch, ReactElement, SetStateAction, useState } from "react";
 import ErrorContainer from "./error-container";
