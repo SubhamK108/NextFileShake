@@ -15,6 +15,12 @@ export default function SignInContainer({ appState, setAppState }: SignInContain
   const [loading, setLoading] = useState<boolean>(false);
   const isUserSignedIN = useRef<boolean>(false);
 
+  const startSignInCached = useCallback(startSignIn, [setAppState]);
+
+  useEffect(() => {
+    startSignInCached();
+  }, [startSignInCached]);
+
   async function startSignIn(): Promise<void> {
     sessionStorage.setItem("CLIENT_ID", process.env.NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_ID!);
     let userToken: string | null = sessionStorage.getItem("USER_GOOGLE_AUTH_TOKEN");
@@ -34,12 +40,6 @@ export default function SignInContainer({ appState, setAppState }: SignInContain
 
     setAppState((prev) => ({ ...prev, userToken: userToken, isSignedIn: true }));
   }
-
-  const startSignInCached = useCallback(startSignIn, [setAppState]);
-
-  useEffect(() => {
-    startSignInCached();
-  }, [startSignInCached]);
 
   if (!loading) {
     return (

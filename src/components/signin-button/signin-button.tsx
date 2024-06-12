@@ -4,6 +4,10 @@ import { delay } from "@/lib/utils";
 import { ReactElement, useEffect } from "react";
 
 export default function SignInButton(): ReactElement {
+  useEffect(() => {
+    addNewGoogleSignInScript();
+  }, []);
+
   async function addNewGoogleSignInScript(): Promise<void> {
     const prevScript: HTMLElement | null = document.getElementById("google-signin-script");
     if (prevScript !== null) {
@@ -18,10 +22,6 @@ export default function SignInButton(): ReactElement {
     document.getElementById("google-signin-button-loader")!.hidden = true;
     document.body.appendChild(newScript);
   }
-
-  useEffect(() => {
-    addNewGoogleSignInScript();
-  }, []);
 
   return (
     <div style={{ colorScheme: "light" }}>
