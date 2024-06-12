@@ -21,7 +21,7 @@ export default function SignInButton(): ReactElement {
 
   useEffect(() => {
     addNewGoogleSignInScript();
-  });
+  }, []);
 
   return (
     <div style={{ colorScheme: "light" }}>
