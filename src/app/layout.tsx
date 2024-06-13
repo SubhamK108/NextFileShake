@@ -3,7 +3,6 @@ import "./globals.css";
 import "../../public/fontawesome/css/fontawesome.min.css";
 import "../../public/fontawesome/css/brands.min.css";
 import "../../public/fontawesome/css/solid.min.css";
-import Script from "next/script";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -59,7 +58,7 @@ export default function RootLayout({
     <html className="max-w-[100vw] overflow-x-hidden" lang="en">
       <body className="max-w-[100vw] overflow-x-hidden bg-[#F2F3F5] dark:bg-[#181818] text-[#404756] dark:text-[#ffffffa6]">
         {children}
-        <Script src="/google-signin-extensions.js" />
+        <script src="../../google-signin-extensions.js" async></script>
       </body>
     </html>
   );

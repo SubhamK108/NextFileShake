@@ -6,5 +6,15 @@ const withPWA = require("next-pwa")({
 });
 
 module.exports = withPWA({
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.qrserver.com",
+        port: "",
+        pathname: "/v1/create-qr-code/**"
+      }
+    ]
+  }
 });

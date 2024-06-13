@@ -6,6 +6,7 @@ import SignInContainer from "../app-containers/app-main-sender/signin-container"
 import UploadContainer from "../app-containers/app-main-sender/upload-container";
 import FileListContainer from "../app-containers/app-main-sender/file-list-container";
 import DriveUploadContainer from "../app-containers/app-main-sender/drive-upload-container";
+import ShareContainer from "../app-containers/app-main-sender/share-container";
 
 export default function AppMainSender(): ReactElement {
   const [appState, setAppState] = useState<AppState>({ ...initialAppState });
@@ -22,7 +23,7 @@ export default function AppMainSender(): ReactElement {
         if (!appState.isDriveUploadComplete) {
           return <DriveUploadContainer appState={appState} setAppState={setAppState} />;
         } else {
-          return <>Share Container</>;
+          return <ShareContainer appState={appState} setAppState={setAppState} />;
         }
       }
     }
