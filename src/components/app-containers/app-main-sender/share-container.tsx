@@ -1,8 +1,7 @@
 "use client";
 
-import { SpinnerLarge, SpinnerSmall } from "@/components/spinner/spinner";
+import { SpinnerLarge } from "@/components/spinner/spinner";
 import { firaCode } from "@/lib/fonts";
-import { ShareData } from "@/models/share-data";
 import { AppState, initialAppState } from "@/services/app-state";
 import Image from "next/image";
 import { Dispatch, ReactElement, SetStateAction, useEffect, useState } from "react";
