@@ -102,7 +102,9 @@ export default function DriveUploadContainer({ appState, setAppState }: DriveUpl
     const interval: NodeJS.Timeout = setInterval(() => {
       const elapsedTime: number = Date.now() - startTime;
       const progressPercent: number = Math.min(Math.round((elapsedTime / estimatedTime) * 100), 100);
-      setAppState((prev) => ({ ...prev, progressInfo: `Uploading: ${progressPercent}%` }));
+      if (progressPercent > 0) {
+        setAppState((prev) => ({ ...prev, progressInfo: `Uploading: ${progressPercent}%` }));
+      }
       if (progressPercent >= 100) {
         clearInterval(interval);
       }
