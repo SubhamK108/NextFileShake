@@ -130,3 +130,15 @@ export async function uploadFile(
     return "Error";
   }
 }
+
+export async function verifySharedFile(fileId: string): Promise<boolean> {
+  try {
+    const fileViewLink: string = `https://drive.google.com/file/d/${fileId}/view?usp=drivesdk`;
+    const response: Response = await fetch(fileViewLink, {
+      method: "HEAD"
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
