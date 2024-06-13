@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next FileShake
 
-## Getting Started
+### Share Files With Ease
 
-First, run the development server:
+### Visit the app [HERE](https://nfs.subhamk.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This app lets you share your files without any hassle. You can share any type of files to anyone. You can share upto 100 files totalling upto 1GB at once at a single time, and of course you can share multiple times, there's no limit on that aspect. In addition to a download link, this app also provides a QR Code which the receivers can easily scan to download the sent files.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This app was written using NextJS (React) & TailwindCSS, using the Google Drive APIs.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Q. Where are my files being stored? What about privacy?
 
-## Learn More
+A. FileShake uses **your personal Google Drive storage** to store & share your files, all your shared files are stored in a folder named _FileShake_ in your personal Google Drive, and **only these specific shared files** are accessible to FileShake, nothing else, all your other personal files in your Google Drive **are not accessible** to FileShake, it can only access the files that are **shared by you via this app**. You can also manually visit the _FileShake_ folder in your personal Google Drive to view/modify/delete all the sahred files. And since this is a fully client-side app with no servers attached, everything stays in **your device & browser**, including your Google Account SignIn information, nothing is stored/collected by FileShake.
 
-To learn more about Next.js, take a look at the following resources:
+#### Q. Is the app free? Are there any restrictions?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A. FileShake is completely free & open-source, you can use it however you want. And as far as restrictions go, at once at a single time, you can only share upto 100 files totalling upto 1GB, but you can share unlimited number of times if you want to share even more files.
