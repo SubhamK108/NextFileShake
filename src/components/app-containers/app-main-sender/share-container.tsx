@@ -17,7 +17,7 @@ export default function ShareContainer({ appState, setAppState }: ShareContainer
   const [isQRCodeLoaded, setIsQRCodeLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    setTimeout(() => setIsQRCodeLoaded(true), 2000);
+    setTimeout(() => setIsQRCodeLoaded(true), 1500);
   }, []);
 
   function copyToClipboard(): void {
