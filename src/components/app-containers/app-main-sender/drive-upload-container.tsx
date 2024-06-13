@@ -44,7 +44,7 @@ export default function DriveUploadContainer({ appState, setAppState }: DriveUpl
         zip.file(file.fileName, file.fileBuffer, { binary: true });
       }
       const compressedBuffer: ArrayBuffer = await zip.generateAsync({ type: "arraybuffer", mimeType: "application/zip" });
-      await processDriveUploadCached(compressedBuffer, `${appState.finalZipFileName}.zip`, "application/zip");
+      await processDriveUploadCached(compressedBuffer, `${appState.finalZipFileName.trim()}.zip`, "application/zip");
     } else {
       await processDriveUploadCached(
         appState.uploadedFiles[0].fileBuffer,
